@@ -1,5 +1,7 @@
 (function() {
   var faye, keymap, speed;
+
+
   faye = new Faye.Client("/faye", {
     timeout: 120
   });
@@ -10,6 +12,7 @@
     return showBatteryStatus(data.demo.batteryPercentage);
   });
   window.showBatteryStatus = function(batteryPercentage) {
+    DataBind.bind($('#batterybar'), batteryPercentage);
     $("#batterybar").width("" + batteryPercentage + "%");
     if (batteryPercentage < 30) {
       $("#batteryProgress").removeClass("progress-success").addClass("progress-warning");

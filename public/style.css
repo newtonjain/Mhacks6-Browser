@@ -1,6 +1,9 @@
 body {
      font-family: sans-serif;
+     background-color: black;
+     color: white
 }
+
 #cam {
     margin: 0 auto;
     display: block;
@@ -26,3 +29,4 @@ body {
 .dropdown-menu {
     text-align: left;
 }
+
